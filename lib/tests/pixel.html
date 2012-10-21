@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Canvas 像素操作</title>
+	</head>
+	<body>
+		<div id="canvasDiv">
+		    <canvas id="canvas" width="300" height="500"> 
+		        <p> 
+		            Your browser does not support the canvas element.
+		        </p> 
+		    </canvas>
+		    <img src="../../resources/theme/images/object/hero/stand/east/east.png" class="none" /> 
+		</div>
+		<script type="text/javascript" defer="defer">
+	    	window.onload = function(){
+	        	var canvas = document.getElementById("canvas");
+	        	var ctx = canvas.getContext("2d");
+
+	        	var image = new Image();
+	        	image.src = "../../resources/theme/images/object/monster/stand/east/east.png";
+	        	var index = 0;
+	        	var pixSection = [], pix = null;
+	        	var _gameInterval = setInterval(function(){
+	            	if(index == 10) index = 0;
+	            	ctx.clearRect(0,0,canvas.width,canvas.height);
+	            	ctx.save();
+	            	ctx.drawImage(image, index * 200,0,200,200,20,20,100,100);
+	            	
+	            	var imgd = ctx.getImageData(20,20,100,100);
+					pix = imgd.data;
+					
+					for(var i = 0, l = pix.length; i < l; i+=4){
+						if(pix[i] != 0){
+							pixSection.push(pix[i]);
+						}
+					}
+					console.log(pixSection, pixSection.length);
+					
+	    			ctx.restore();
+	    			index ++;
+				}, 1000);
+	         };
+	    </script>
+	</body>
+</html>

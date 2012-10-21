@@ -1,0 +1,106 @@
+@CHARSET "UTF-8";
+/** Utility CSS **/
+#gameWindow{
+	cursor:pointer;
+	left:50%;
+	margin-left: -544px;
+}
+#initDiv{
+	background: url("../images/bg/bg.jpg") no-repeat scroll 0 0 transparent;
+	left: 50%;
+	top:50%;
+	width:1000px;
+	height:620px;
+	margin-left: -500px;
+	margin-top: -310px;
+	border-radius:10px;
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius:10px;
+	-o-border-radius:10px;
+}
+#initShow{
+	font: bold 35px "华文中宋","黑体";
+	top: 35%;
+	left: 50%;
+}
+#initShow p{
+	color:#3F0;
+	left:-50%;
+}
+#initShow #show{
+	font-size: 25px;
+}
+#borderDiv{
+	width:1088px;
+	height:17px;
+	left:50%;
+	bottom:130px;
+	margin-left:-544px;
+	background: url("../images/bg/tools_border.png") repeat-x scroll 0 0 transparent;
+}
+#toolsDiv{
+	width:1088px;
+	height:130px;
+	left:50%;
+	bottom:0;
+	margin-left:-544px;
+	background:#000000;
+}
+#previewMapDiv{
+	width:360px;
+	height:128px;
+	margin-top:2px;
+	background:url("../images/map/map01_bak.jpg") no-repeat scroll 0 0 transparent;
+}
+#previewGameWindow{
+	width:360px;
+	height:128px;
+}
+#skillsDiv{
+	position:absolute;
+	left:50%;
+	bottom: 5%;
+}
+#skillsDiv .skills{
+	position:relative;
+	float: left;
+	display:inline;
+	margin-right:20px;
+	left:-50%;
+	width:35px;
+	height:35px;
+}
+#skills0{
+	background:url("../images/ico/skills.gif") 0 0 no-repeat scroll transparent;
+}
+#skills1{
+	background:url("../images/ico/skills.gif") 0 -46px no-repeat scroll transparent;
+}
+#skills2{
+	background:url("../images/ico/skills.gif") 0 -92px no-repeat scroll transparent;
+}
+#skills3{
+	background:url("../images/ico/skills.gif") 0 -137px no-repeat scroll transparent;
+}
+#helpDiv{
+	left: 15%;
+	top: 2%;
+}
+.helpMsg{
+	font-size: 12px;
+	color: #fff;
+	text-align: left;
+}
+#noticeDiv {
+	left:900px;
+	bottom:6%;
+	color: #ffffff;
+	font-size:12px;
+}
+#heroInfoDiv {
+	left:120px;
+	bottom:6%;
+	font-size:12px;
+	color:#ffffff;
+} 

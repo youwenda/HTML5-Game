@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>HTML5 游戏 Night Elf(暗夜精灵)</title>
+		<link rel="stylesheet" type="text/css" href="resources/theme/css/base.css" /> 
+		<link rel="stylesheet" type="text/css" href="resources/theme/css/display.css" /> 
+	</head>
+
+	<body>
+		<canvas id="gameWindow" class="pa">请使用FireFox, Chrome或Opera 浏览器</canvas>
+		<div id="initDiv" class="pa"></div>
+		<div id="initShow" class="tc pa">
+			<p class="pr lh200">NightElf(暗夜精灵)</p>
+			<p class="pr lh200" id="show">加载中...</p>
+		</div>
+		<!-- 游戏工具栏 -->
+		<div id="borderDiv" class="pa none"></div>
+		<div id="toolsDiv" class="pa none">
+			<!-- 缩略图 -->
+			<div id="previewMapDiv" class="fl mr30">
+				<canvas id="previewGameWindow">请使用FireFox, Chrome或Opera 浏览器</canvas>
+			</div>
+			<div id="heroInfoDiv" class="fl mr30">
+				<label id="heroInfoLabel"></label>
+			</div>
+			<div id="noticeDiv" class="fl mr30">
+				<label id="noticeLabel"></label>
+			</div>
+			<!-- 技能工具栏 -->
+			<div id="skillsDiv" class="none" style="display:none;">
+				<div id="skills0" class="skills"></div>
+				<div id="skills1" class="skills"></div>
+				<div id="skills2" class="skills"></div>
+				<div id="skills3" class="skills"></div>
+			</div>
+			<!-- 操作提示 -->
+			<div id="helpDiv" class="pa lh150 none">
+				<p class="helpMsg"> 操作提示：点击鼠标可操作英雄移动方向</p>
+			</div>
+		</div>
+		<script type="text/javascript" src="lib/util/lazyload-min.js"></script>
+		<script type="text/javascript">
+			LazyLoad.js([
+				"lib/util/GLOBAL.js",
+				"lib/util/GameBaseUtil.js",
+				"lib/constants/Database.js",
+				"lib/constants/MapConstants.js",
+				"lib/constants/SoundConstants.js",
+				"lib/constants/SpriteConstants.js",
+				"lib/object/DisplayObject.js",
+				"lib/object/Map.js",
+				"lib/object/SpriteFrame.js",
+				"lib/object/Sprite.js",
+				"lib/object/Hero.js",
+				"lib/object/Monster.js",
+				"lib/object/GameObjectManager.js",
+				"lib/util/AStar.js",
+				"lib/controller/Controller.js",
+				"lib/controller/HeroController.js",
+				"lib/controller/MonsterController.js",
+				"lib/controller/Config.js",
+				"lib/controller/Application.js"
+			],function(){
+				window.onload = function(){
+					Config.initialize();
+				}
+			});
+		</script>
+	</body>
+</html>
